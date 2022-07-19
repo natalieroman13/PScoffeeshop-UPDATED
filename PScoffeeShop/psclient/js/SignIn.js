@@ -8,29 +8,37 @@ $('#signin').click(function(){
 
   $.ajax({
       url: "http://localhost:6363" + "/sign-in",
-      type: "post",
+      type: "get",
       data: signInString,
       success: function(response){
-        var data=JSON.parse(response);
-        if (data.msg==="SUCCESS"){
-          location.replace("http://localhost:6363"+"/PSDashboard");
-          alert("SUCCESS: "+response);
-        }
-      else{
-        console.log(data.msg)
-      }
+          var res= JSON.parse(response);
+            if (res.msg==="SUCCESS"){
+              localStorage.setItem("userID",res.userID);
+              location.replace("http://localhost:6363"+"/PSDashboard");
+            } else if (res.msg==="Login Error: Check your email or/and password is correct.") {
+              $("#loginErr").css("visbility","visible");
+              alert(res.msg);
+            }else {
+              alert(res.msg);
+            }
+      }, error: function(err){
+              alert(err);
+            }
+  });
 
-  }, error: function(err){
-  alert(err);
-}
-		// return false;
-  })
 });
-
-
-
 
 
 $('#CreateNewAcc').click(function(){
 location.assign("http://localhost:6363"+"/CreateAccount");
+});
+
+//Refernce: https://www.w3schools.com/howto/howto_js_toggle_password.asp
+$('#showPass').click(function(){
+var pass=document.getElementById("password");
+  if(pass.type==="password"){
+    pass.type="text";
+  } else{
+    pass.type="password";
+  }
 });

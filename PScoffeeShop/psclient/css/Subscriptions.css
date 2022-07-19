@@ -1,0 +1,36 @@
+body{
+  background-color: black;
+  text-align: center;
+}
+h1{
+  font-family: "Blackadder ITC",cursive;
+  color: rgb(255,0,102) ;
+}
+h2{
+  color: rgb(255,153,204);
+  font-family: "Bahnschrift Light SemiCondensed", serif;
+}
+p{
+  color: white ;
+}
+th{
+  width:15%;
+  color:white;
+  size:3;
+  font-style: italic;
+  font-family: "Calibri", sans-serif;
+}
+table{
+  border:2px solid;
+  border-color: white;
+  width:100%;
+  background-color: rgb(255,0,102);
+  height:8%;
+}
+td{
+  column-span:100%;
+  text-align: center;
+  width:15%;
+  size:4;
+
+}

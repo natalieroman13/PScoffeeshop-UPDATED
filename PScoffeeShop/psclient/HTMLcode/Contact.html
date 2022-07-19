@@ -3,7 +3,7 @@
 <img src="/psclient/images/mainImages/LOGOcropped2Circle.png" alt="Logo" width="100" height="110" align="left"/>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src='/psclient/js/CreateAccount.js' async></script>
+        <script src='/psclient/js/Contact.js' async></script>
 
 </head>
 <body style="background-color:black";>
@@ -19,7 +19,7 @@
     <th width="15%"><font color="white" size="3"><a href="/psclient/HTMLcode/Subscriptions.html"><I> SUBSCRIPTIONS</I></a></font></th>
     <th width="15%"><font color="white" size="3"><a href="/psclient/HTMLcode/WorkWithUs.html"><I> WORK WITH US</I></a></font></th>
     <th width="15%"><font color="white" size="3"><a href="/psclient/HTMLcode/SignIn.html"><I> SIGN IN</I></a></font></th>
-    <th width="15%"><font color="white" size="3"><a href="/psclient/HTMLcode/Cart.html"><I> CART</I></a></font></th>
+    <!-- <th width="15%"><font color="white" size="3"><a href="/psclient/HTMLcode/Cart.html"><I> CART</I></a></font></th> -->
   </tr>
 </table>
 <style>
@@ -29,23 +29,22 @@ div{
 }
 </style>
 <div>
-<h1 style="color:hotpink">Contact</h1>
-
+	<h1 style="color:hotpink"><I> ~Contact~ </I></h1>
 <form>
-  <label for="name">Enter Your Full Name</label><br>
-  <input type="text" id="fullName" fullName="name"><br>
+  <label for="fullName">Enter Your Full Name</label><br>
+  <input type="text" id="fullName" required><br>
 
 
-  <label for="telephone">Enter Your Phone Number</label><br>
-  <input type="tel" id="phone" phone="telephone"><br>
+  <label for="phone">Enter Your Phone Number: </label><br>
+  <input type="tel" id="phone" placeholder="OPTIONAL"/><br>
 
-  <label for="emailAdd">Enter Your Email</label><br>
-  <input type="email" id="email" email="emailAdd"><br>
+  <label for="email">Enter Your Email</label><br>
+  <input type="email" id="email" onclick="ValidateEmail()" required><br>
 
-  <label for="tb">We appreciate our customer's feedback! Enter your comments or questions here. Someone will review your submission soon.</label><br>
-  <input type="textBox" id="feedback" feedback="tb"><br>
+  <label for="feedback">We appreciate our customer's feedback! Enter your comments or questions here. Someone will review your submission soon.</label><br>
+  <textarea placeholder="Enter your feedback here." required></textarea><br>
 
-  <button id="ContactSubmit">Submit</button>
+  <button type="submit" id="ContactSubmit">Submit</button>
 </form>
 </div>
 

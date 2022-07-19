@@ -1,0 +1,54 @@
+/* body{
+  background-color: white;
+}
+
+.psSchedule{
+  border:2;
+  width:100%;
+  bgcolor:hotpink;
+  height:8%;
+}
+
+th{
+  width:15%;
+  color:white;
+  size:3;
+} */
+
+.column{
+  align-content: center;
+}
+.productDes{
+  margin: auto;
+  width: 90%;
+  height:30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about{
+  height: 100%;
+}
+.product{
+  padding-top:5px;
+  line-height: 10px;
+  font-size:32px;
+  font-family:'Blackadder ITC';
+  font-weight:800;
+  color: hotpink;
+}
+.price{
+  line-height:10px;
+  font-size:18px
+  font-family: 'Bahnschrift Light SemiCondensed';
+  font-weight: 600;
+  color: pink;
+}
+.ounces{
+  line-height:10px;
+  font-size:18px
+  font-family: 'Calibri';
+  font-weight: 600;
+  color: black;
+}

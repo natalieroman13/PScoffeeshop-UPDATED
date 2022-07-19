@@ -2,22 +2,24 @@
 <html lang='en'>
 	<head>
 	<img src="/psclient/images/mainImages/LOGOcropped2Circle.png" alt="Logo" width="110" height="120" align="left"/>
-
+ 				<script src='/psclient/js/PSDashboard.js' async></script>
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+				<script src='/psclient/js/LogOut.js' async></script>
 	</head>
 	<body style="background-color:white";>
 	  <h2 style="color:hotpink">Presumptuous Sips</h2>
 		<h3 style="color:pink">P.S. Member Dashboard</h3>
+		<p style="color:black">The Coffee Shop for Emos and Baddies</p>
 
-		<table id="psSchedule" border="2" width="100%" bgcolor="hotpink" height="8%">
-		  <tr>
-		    <th width="15%"><font color="white" size="3"><I>MENU</I></a></font></th>
-		    <th width="15%"><font color="white" size="3"><I>OFFERS</I></a></font></th>
-		    <th width="15%"><font color="white" size="3"><I>MEMBERSHIP</I></a></font></th>
-				<th width="15%"><font color="white" size="3"><I>CART</I></a></font></th>
-				<th width="15%"><font color="white" size="3"><I>P.S. Coffee Shop</I></a></font></th>
-				<th width="15%"><font color="white" size="3"><I>MEMBER</I></a></font></th>
+		<table id="psSchedule" border="2" width="75%" bgcolor="hotpink" height="8%">
+	    <tr>
+	      <th width="15%"><font color="white" size="3"><a href="/psclient/HTMLcode/PSDashboard.html"><I>DASHBOARD</I></a></font></th>
+	      <th width="15%"><font color="white" size="3"><a href="/psclient/HTMLcode/Cart.html"><I>CART</I></a></font></th>
+	      <th width="15%"><font color="white" size="3"><a href="/psclient/HTMLcode/Member.html"><I>MEMBER</I></a></font></th>
+				<button onclick="LogOut()" style="color:hotpink;"><I>LOG OUT</I></button>
 			</tr>
 
+	  </table>
 
 			<table border="2" width="75%" bgcolor="pink" height="8%">
 				<td colspan="7" style="color:hotpink"><center>~P.S. Daily Brewing Events~</center></td>
@@ -30,9 +32,10 @@
 					<td width="15%"><font color="white" size="2"><I>SATURDAY</I></a></font></td>
 					<td width="15%"><font color="white" size="2"><I>SUNDAY</I></a></font></td>
 				</tr>
+
 				<tr>
 					<td width="15%" height="60"><font color="white" size="2"><h5>Milkshake Special!</h5>
-						<h6>Maybe we'll feature a new milkshale, have special deals. Come find out for yourself!</h6></a></font></td>
+						<h6>Maybe we'll feature a new milkshake, have special deals. Come find out for yourself!</h6></a></font></td>
 					<td width="15%" height="60"><font color="white" size="2"><h5>Tuesday Tea Day!</h5>
 						<h6>Order a tea and get 2x points for every tea you order.</h6></a></font></td>
 					<td width="15%" height="60"><font color="white" size="2"><h5>What the Outfit?!</h5>
@@ -46,5 +49,9 @@
 					<td width="15%" height="60"><font color="white" size="2"><h5>Sunday Shuffling through the Years!</h5>
 						<h6>Different Music Genres from recognized deceased artists. </h6></a></font></td>
 				</tr>
-<img src="/psclient/images/DVG/ShopSyrups.png"/>
-  </html>
+<p>
+<a href="http://localhost:6363/SyrupsNSauces">
+<img src="/psclient/images/DVG/ShopSyrups.png" alt="Syrups" width="110" height="120" align="right" onclick="ShowSyrups()"/>
+</p>
+
+	</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+	<img src="/psclient/images/mainImages/LOGOcropped2Circle.png" alt="Logo" width="110" height="120" align="left"/>
+	<script src='/psclient/js/LogOut.js' async></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src='/psclient/js/Member.js' async></script>
+
+	</head>
+	<body style="background-color:white";>
+	  <h2 style="color:hotpink">Presumptuous Sips</h2>
+		<h3 style="color:pink">P.S. Member Dashboard</h3>
+		<p style="color:black">The Coffee Shop for Emos and Baddies</p>
+
+		<table id="psSchedule" border="2" width="100%" bgcolor="hotpink" height="8%">
+	    <tr>
+	      <th width="15%"><font color="white" size="3"><a href="/psclient/HTMLcode/PSDashboard.html"><I>DASHBOARD</I></a></font></th>
+	      <th width="15%"><font color="white" size="3"><a href="/psclient/HTMLcode/Cart.html"><I>CART</I></a></font></th>
+	      <th width="15%"><font color="white" size="3"><a href="/psclient/HTMLcode/Member.html"><I>MEMBER</I></a></font></th>
+				<button onclick="LogOut()" style="color:hotpink;"><I>LOG OUT</I></button>
+	    </tr>
+	  </table>
+
+<div class="memberInfo" style="border:solid; border-width:3px; border-color: hotpink;">
+			<p style="color: hotpink">Member Information:</p>
+
+			<div id="editbtn" style="text-align:right">
+			<button style="color: blue" onclick="editInfo()"><u>Edit Information</u></button>
+			</div>
+
+			<form>
+				<fieldset id="memberInfoFS" disabled=true>
+	    <label for="email">Email Address:</label><br>
+	    <input type="email" id="email"><br>
+
+	    <label for="password">Password:</label><br>
+	    <input type="password" id="password" autocomplete="on" ><br>
+
+	    <label for="fName">First Name:</label><br>
+	    <input type="text" id="firstName"><br>
+
+	    <label for="lName">Last Name:</label><br>
+	    <input type="text" id="lastName"><br>
+
+	    <label phone="phone">Phone Number:</label><br>
+	    <input type="tel" id="phone"><br>
+
+	<!--Credit: https://codepen.io/lusa9/pen/wvBoNKX-->
+	<div class="addGroup">
+	  <label for="address"> Address:</label><br>
+	  <input type="street"
+	    class="addGroup"
+	    id="street"
+	    placeholder="Street"
+	  >
+
+	  <input type="city"
+	    class="addGroup"
+	    id="city"
+	    placeholder="City"
+	  >
+
+	  <input type="state"
+	    class="addGroup"
+	    id="state"
+	    placeholder="State"
+	  >
+
+	  <input type="zip"
+	    class="addGroup"
+	    id="zipCode"
+	    placeholder="Zip Code"
+	  >
+
+	  <input type="country"
+	    class="addGroup"
+	    id="country"
+	    placeholder="Country"
+	  >
+	</div>
+	<center><button id="submitNewInfo" hidden=true>Submit</button></center>
+</fieldset>
+</form>
+</div>
+	</html>
