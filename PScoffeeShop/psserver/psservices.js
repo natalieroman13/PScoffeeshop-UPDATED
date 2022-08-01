@@ -93,22 +93,42 @@ console.log("we before query");
       });
     });
 
-    psapp.put('/memberInformation/edit', function(req,res){
+    psapp.put('/memberInformationEdit', function(req,res){
       console.log("we are in edit member info service");
-      var data=req.query.userID;
-      console.log(data);
-      connection.query("UPDATE * FROM Customer WHERE userID=?", [data], function(err,results){
+
+        var userData=req.body.userID;
+        var email= req.body.email;
+        var firstName= req.body.firstName;
+        var lastName= req.body.lastName;
+        var password= req.body.password;
+        var custPhone= req.body.phone;
+        var street= req.body.street;
+        var city= req.body.city;
+        var state= req.body.state;
+        var zipCode= req.body.zipCode;
+        var country= req.body.country;
+
+      console.log(userData, email, firstName, lastName, password, custPhone, street, city, state, zipCode, country);
+      connection.query("UPDATE Customer SET email=?, password=?, firstName=?, lastName=?, custPhone=?, city=?, state=?, zipCode=?, country=?, street=? WHERE userID=?", [email, password, firstName, lastName, custPhone, city, state, zipCode, country, street, userData], function(err,results){
         if(err){
-           return res.status(201).send(JSON.stringify({msg: "Error:" + err}));
-
+           return res.status(201).send(JSON.stringify({msg: "Error:" + err}))
         } else {
-          if(results.length===0){
-            return res.status(201).send(JSON.stringify({msg: "Not Found"}));
+          return res.status(201).send(JSON.stringify({msg: "SUCCESS"}));
+        }
+      });
+    });
 
-          } else {
-            return res.status(201).send(JSON.stringify({msg: "SUCCESS",userData:results[0]}));
+    psapp.put('/getPrice', function(req,res){
+      console.log("we are getting the price");
 
-          }
+        var pricePerProduct=req.body.productPrice;
+
+      console.log(pricePerProduct);
+      connection.query("SELECT * FROM CartLineItem WHERE userID=?", [email, password, firstName, lastName, custPhone, city, state, zipCode, country, street, userData], function(err,results){
+        if(err){
+           return res.status(201).send(JSON.stringify({msg: "Error:" + err}))
+        } else {
+          return res.status(201).send(JSON.stringify({msg: "SUCCESS"}));
         }
       });
     });

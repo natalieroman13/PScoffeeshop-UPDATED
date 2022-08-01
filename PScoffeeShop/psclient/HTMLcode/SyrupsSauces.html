@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang='en'>
 	<head>
-  <!-- <link rel="stylesheet" type="text/css" href="/psclient/css/style.css">
-  <link rel="stylesheet" type="text/css" href="/psclient/css/Subscriptions.css"> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<img src="/psclient/images/mainImages/LOGOcropped2Circle.png" alt="Logo" width="110" height="120" align="left"/>
-
+	<!-- <link rel="stylesheet" type="text/css" href="/psclient/css/Subscriptions.css"> -->
+	<script src='/psclient/js/LogOut.js' async></script>
 	</head>
 
 	<body style="background-color:white">
@@ -15,89 +14,113 @@
   		<table id="psSchedule" border="2" width="100%" bgcolor="hotpink" height="8%">
   		  <tr>
   		    <th width="15%"><font color="white" size="3"><a href="/psclient/HTMLcode/PSDashboard.html"><I>DASHBOARD</I></a></font></th>
-  				<th width="15%"><font color="white" size="3"><a href="/psclient/HTMLcode/Cart.html"><I>CART</I></a></font></th>
+					<th width="15%"><font color="white" size="3"><a href="#/psclient/HTMLcode/SyrupsSauces.html"><I>SHOP</I></a></font></th>
+					<th width="15%"><font color="white" size="3"><a href="/psclient/HTMLcode/Cart.html"><I>CART</I></a></font></th>
   				<th width="15%"><font color="white" size="3"><a href="/psclient/HTMLcode/Member.html"><I>MEMBER</I></a></font></th>
-					<button onclick="LogOut()" style="color:hotpink;"><I>LOG OUT</I></button>
+
+					<button align="right" onclick="LogOut()" style="color:hotpink;"><I>LOG OUT</I></button>
   			</tr>
   </table>
 
     <h2 style="color:hotpink">Shopping Cart: Syrups N Sauces</h2>
-		<center><h3 style="color:pink">Syrups</h3></center>
-<form>
-<div class="row">
-  <div class="column">
-				<div class="productDes">
+
+		<center><h3 style="color:pink">DaVinci Gourmet Syrups</h3></center>
+<table name=syrupsTable>
+<tr align="center">
+  <td>
+				<div align="center" class="productDes">
 					<img src="/psclient/images/DVG/DVGfrenchvanilla.jpeg" alt="French Vanilla" width="178" height="220"/>
-					<label class="product"><B>DVG French Vanilla Syrup</B></label><input type="checkbox" id="vanillachk">
+					<center><label style="font-size:15px" class="product"><B>DVG French Vanilla Syrup</B></label></center>
 					<h4 class="price">Price: $7.65</h4>
 					<h4 class="ounces">25.4 FL OZ</h4>
+					<h4 class="quantity">Quantity: <input type="text" size="5" id="quantityInput" onclick="UpdatePrice()"></h4>
+
 				</div>
-  </div>
-  <div class="column">
+  </td>
+  <td>
 			<div class="productDes">
 				<img src="/psclient/images/DVG/DVGraspberry.jpeg" alt="Raspberry" width="178" height="220"/>
-				<label class="product"><B>DVG Raspberry Syrup</B></label><input type="checkbox" id="raspberrychk">
+			  <center><label style="font-size:15px" class="product"><B>DVG Raspberry Syrup</B></label></center>
 				<h4 class="price">Price: $6.32</h4>
 				<h4 class="ounces">25.4 FL OZ</h4>
+				<h4 class="quantity">Quantity: <input type="text" size="5" id="quantityInput"></h4>
+
 			</div>
-  </div>
-  <div class="column">
+  </td>
+  <td>
 			<div class="productDes">
 				<img src="/psclient/images/DVG/DVGsfCaramel.jpeg" alt="SF Caramel" width="178" height="220"/>
-				<label class="product"><B>DVG Caramel Syrup</B></label><input type="checkbox" id="caramelchk">
+				<center><label style="font-size:15px" class="product"><B>DVG Caramel Syrup</B></label></center>
 				<h4 class="price">Price: $7.21</h4>
-				<h4>25.4 FL OZ</h4>
+				<h4 class="ounces">25.4 FL OZ</h4>
+				<h4 class="quantity">Quantity: <input type="text" size="5" id="quantityInput"></h4>
+
 			</div>
-  </div>
-  <div class="column">
+  </td>
+
+  <td>
 			<div class="productDes">
-				<img src="/psclient/images/DVG/DVGsgIrishCream.jpeg" alt="SF Irish Cream" width="110" height="120" />
-				<label class="product"><B>DVG Irish Cream Syrup</B></label><input type="checkbox" id="irishcreamchk">
+				<img src="/psclient/images/DVG/DVGsgIrishCream.jpeg" alt="SF Irish Cream" width="200" height="210" />
+				<center><label style="font-size:15px" class="product"><B>DVG Irish Cream Syrup</B></label></center>
 				<h4 class="price">Price: $6.78</h4>
 				<h4 class="ounces">25.4 FL OZ</h4>
+				<h4 class="quantity">Quantity: <input type="text" size="5" id="quantityInput"></h4>
+
 			</div>
-  </div>
-  <div class="column">
+  </td>
+  <td>
 			<div class="productDes">
-				<img src="/psclient/images/DVG/DVGstrawberry.jpeg" alt="Strawberry" width="110" height="120"/>
-				<label class="product"><B>DVG Strawberry Syrup</B></label><input type="checkbox" id="strawberrychk">
+				<img src="/psclient/images/DVG/DVGstrawberry.jpeg" alt="Strawberry" width="200" height="210"/>
+				<center><label style="font-size:15px" class="product"><B>DVG Strawberry Syrup</B></label></center>
 				<h4 class="price">Price: $5.45</h4>
 				<h4 class="ounces">25.4 FL OZ</h4>
+				<h4 class="quantity">Quantity: <input type="text" size="5" id="quantityInput"></h4>
+
 			</div>
-  </div>
+  </td>
 </div>
-
-
-    <center><h3 style="color:pink">Sauces</h3></center>
-
-<div class="row">
-  <div class="column">
+</tr>
+</table>
+<hr class="dashed"></hr>
+    <center><h3 style="color:pink">DaVinci Gourmet Sauces</h3></center>
+<table>
+<tr align="center">
+  <td style="align-content: : center">
 			<div class="productDes">
-				<img src="/psclient/images/DVG/DVGchocoSauce.jpeg" alt="Chocolate Sauce" width="110" height="120"/>
-				<label class="product"><B>DVG Chocolate Sauce</B></label><input type="checkbox" id="chocosaucechk">
+				<img src="/psclient/images/DVG/DVGchocoSauce.jpeg" alt="Chocolate Sauce" width="200" height="190"/>
+				<center><label style="font-size:15px" class="product"><B>DVG Chocolate Sauce</B></label></center>
 				<h4 class="price">Price: $12.45</h4>
 				<h4 class="ounces">64 FL OZ</h4>
+				<h4 class="quantity">Quantity: <input type="text" size="5" id="quantityInput"></h4>
+
 			</div>
-  </div>
-  <div class="column">
+  </td>
+  <td>
 			<div class="productDes">
-				<img src="/psclient/images/DVG/DVGpumpkin.jpeg" alt="Pumpkin" width="110" height="120"/>
-				<label class="product"><B>DVG Pumpkin Sauce</B></label><input type="checkbox" id="pumpkinsaucechk">
+				<img src="/psclient/images/DVG/DVGpumpkin.jpeg" alt="Pumpkin" width="160" height="195"/>
+				<center><label style="font-size:15px" class="product"><B>DVG Pumpkin Sauce</B></label></center>
 				<h4 class="price">Price: $13.42</h4>
 				<h4 class="ounces">64 FL OZ</h4>
+				<h4 class="quantity">Quantity: <input type="text" size="5" id="quantityInput"></h4>
+
 			</div>
-  </div>
-  <div class="column">
+  </td>
+  <td>
 			<div class="productDes">
-				<img src="/psclient/images/DVG/DVGwhiteChocoSauce.jpeg" alt="White Chocolate Sauce" width="110" height="120"/>
-				<label class="product"><B>DVG White Chocolate Sauce</B></label><input type="checkbox" id="whitechocosaucechk">
+				<img src="/psclient/images/DVG/DVGwhiteChocoSauce.jpeg" alt="White Chocolate Sauce" width="200" height="190"/>
+				<center><label style="font-size:15px" class="product"><B>DVG White Chocolate Sauce</B></label></center>
 				<h4 class="price">Price: $12.45</h4>
 				<h4 class="ounces">64 FL OZ</h4>
+				<h4 class="quantity">Quantity: <input type="text" size="5" id="quantityInput"></h4>
 
 			</div><br>
-		<center><button id="AddToCart" onclick="SelectedItems()">Add to Cart</button></center>
-  </div>
-</div><br>
-</form>
-<center><button id="checkout">Checkout</button></center>
+  </td>
+</tr>
+</table>
+<hr class="dashed"></hr>
+<div align="center">
+	<button style="background-color:hotpink; color:white" id="AddToCart" onclick="SelectedItems()">Add to Cart</button><br>
+
+	<br><button style="background-color:green; color:white" id="checkout">Checkout</button>
+</div>
 </html>

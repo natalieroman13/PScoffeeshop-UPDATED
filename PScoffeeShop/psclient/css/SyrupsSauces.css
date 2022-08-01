@@ -1,22 +1,5 @@
-/* body{
-  background-color: white;
-}
-
-.psSchedule{
-  border:2;
-  width:100%;
-  bgcolor:hotpink;
-  height:8%;
-}
-
-th{
-  width:15%;
-  color:white;
-  size:3;
-} */
-
-.column{
-  align-content: center;
+.LogOutbtn{
+  align: right;
 }
 .productDes{
   margin: auto;

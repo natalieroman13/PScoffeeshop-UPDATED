@@ -20,29 +20,21 @@ var jsonString={userID:userData};
 		var country= $('#country').val();
 
 
-	var newString = {email: email, password: password, firstName: firstName, lastName: lastName, phone: phone, street:street, city:city, state:state, zipCode:zipCode, country:country};
+	var newString = {userID:userData, email: email, password: password, firstName: firstName, lastName: lastName, phone: phone, street:street, city:city, state:state, zipCode:zipCode, country:country};
 
 console.log(jsonString);
+console.log(newString);
 
   $.ajax({
-      url: "http://localhost:6363" + "/memberInformation/edit",
+      url: "http://localhost:6363" + "/memberInformationEdit",
       type: "put",
-      data: combinedString,
+      data: newString,
       success: function(response){
       console.log(response);
       var res= JSON.parse(response);
       if (res.msg==="SUCCESS"){
-      $('#email').val();
-      $('#password').val();
-      $('#firstName').val();
-      $('#lastName').val();
-      $('#phone').val();
-      $('#street').val();
-      $('#city').val();
-      $('#state').val();
-      $('#zipCode').val();
-      $('#country').val();
-
+        document.getElementById("submitNewInfo").hidden = true;
+        document.getElementById("memberInfoFS").disabled = true;
     }else {
       alert(res.msg);
     }
