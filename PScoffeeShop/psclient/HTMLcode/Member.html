@@ -8,22 +8,22 @@
 
 	</head>
 	<body style="background-color:white";>
-	  <h2 style="color:hotpink">Presumptuous Sips</h2>
-		<h3 style="color:pink">P.S. Member Dashboard</h3>
+	  <h1 style="color:hotpink">Presumptuous Sips</h2>
+		<h2 style="color:pink">P.S. Member Dashboard</h3>
 		<p style="color:black">The Coffee Shop for Emos and Baddies</p>
 
 		<table id="psSchedule" border="2" width="100%" bgcolor="hotpink" height="8%">
-	    <tr>
-	      <th width="15%"><font color="white" size="3"><a href="/psclient/HTMLcode/PSDashboard.html"><I>DASHBOARD</I></a></font></th>
-				<th width="15%"><font color="white" size="3"><a href="/psclient/HTMLcode/SyrupsSauces.html"><I>SHOP</I></a></font></th>
-				<th width="15%"><font color="white" size="3"><a href="/psclient/HTMLcode/Cart.html"><I>CART</I></a></font></th>
-	      <th width="15%"><font color="white" size="3"><a href="/psclient/HTMLcode/Member.html"><I>MEMBER</I></a></font></th>
-				<button onclick="LogOut()" style="color:hotpink;"><I>LOG OUT</I></button>
-	    </tr>
-	  </table>
+			<tr>
+				<th width="15%"><font color="white" size="5"><a href="/psclient/HTMLcode/PSDashboard.html"><I>DASHBOARD</I></a></font></th>
+				<th width="15%"><font color="white" size="5"><a href="/psclient/HTMLcode/SyrupsSauces.html"><I>SHOP</I></a></font></th>
+				<th width="15%"><font color="white" size="5"><a href="/psclient/HTMLcode/Member.html"><I>MEMBER</I></a></font></th>
+				<button onclick="LogOut()" style="color:hotpink"><I>LOG OUT</I></button>
+			</tr>
+
+		</table>
 
 <div class="memberInfo" style="border:solid; border-width:3px; border-color: hotpink;">
-			<p style="color: hotpink">Member Information:</p>
+			<p style="font-size: 30px; color: hotpink">Member Information:</p>
 
 			<div id="editbtn" style="text-align:right">
 			<button style="color: blue" onclick="editInfo()"><u>Edit Information</u></button>
@@ -31,51 +31,56 @@
 
 			<form>
 				<fieldset id="memberInfoFS" disabled=true>
-	    <label for="email">Email Address:</label><br>
-	    <input type="email" id="email"><br>
+	    <label style="font-size: 20px;" for="email">Email Address:</label><br>
+	    <input style="font-size: 20; height:20px; width:250px" type="email" id="email"><br>
 
-	    <label for="password">Password:</label><br>
-	    <input type="password" id="password" autocomplete="on" ><br>
+	    <label style="font-size: 20px;" for="password">Password:</label><br>
+	    <input style="font-size: 20; height:20px; width:250px" type="password" id="password" autocomplete="on" ><br>
 
-	    <label for="fName">First Name:</label><br>
-	    <input type="text" id="firstName"><br>
+	    <label style="font-size: 20px;" for="fName">First Name:</label><br>
+	    <input style="font-size: 20; height:20px; width:250px" type="text" id="firstName"><br>
 
-	    <label for="lName">Last Name:</label><br>
-	    <input type="text" id="lastName"><br>
+	    <label style="font-size: 20px;" for="lName">Last Name:</label><br>
+	    <input style="font-size: 20; height:20px; width:250px" type="text" id="lastName"><br>
 
-	    <label phone="phone">Phone Number:</label><br>
-	    <input type="tel" id="phone"><br>
+	    <label style="font-size: 20px;" phone="phone">Phone Number:</label><br>
+	    <input style="font-size: 20; height:20px; width:250px" type="tel" id="phone"><br>
 
 	<!--Credit: https://codepen.io/lusa9/pen/wvBoNKX-->
 	<div class="addGroup">
-	  <label for="address"> Address:</label><br>
+	  <label style="font-size: 20px;" for="address"> Address:</label><br>
 	  <input type="street"
 	    class="addGroup"
 	    id="street"
+			style="font-size: 20; height:20px; width:250px"
 	    placeholder="Street"
 	  >
 
 	  <input type="city"
 	    class="addGroup"
 	    id="city"
+			style="font-size: 20; height:20px; width:250px"
 	    placeholder="City"
 	  >
 
 	  <input type="state"
 	    class="addGroup"
 	    id="state"
+			style="font-size: 20; height:20px; width:250px"
 	    placeholder="State"
 	  >
 
 	  <input type="zip"
 	    class="addGroup"
 	    id="zipCode"
+			style="font-size: 20; height:20px; width:250px"
 	    placeholder="Zip Code"
 	  >
 
 	  <input type="country"
 	    class="addGroup"
 	    id="country"
+			style="font-size: 20; height:20px; width:250px"
 	    placeholder="Country"
 	  >
 	</div>

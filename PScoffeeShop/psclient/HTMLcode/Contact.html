@@ -26,25 +26,26 @@
 div{
   bgcolor: hotpink;
   color: white;
-}
+};
+
 </style>
 <div>
 	<h1 style="color:hotpink"><I> ~Contact~ </I></h1>
-<form>
+<form style="font-size: 25;width: 100%; height:70%">
   <label for="fullName">Enter Your Full Name</label><br>
-  <input type="text" id="fullName" required><br>
+  <input style="font-size: 20; height:30px; width:250px" type="text" id="fullName" required><hr>
 
 
   <label for="phone">Enter Your Phone Number: </label><br>
-  <input type="tel" id="phone" placeholder="OPTIONAL"/><br>
+  <input style="font-size: 20; height:30px; width:250px" type="tel" id="phone" placeholder="OPTIONAL"/><hr>
 
   <label for="email">Enter Your Email</label><br>
-  <input type="email" id="email" onclick="ValidateEmail()" required><br>
+  <input style="font-size: 20; height:30px; width:250px" type="email" id="email" onclick="ValidateEmail()" required><hr>
 
   <label for="feedback">We appreciate our customer's feedback! Enter your comments or questions here. Someone will review your submission soon.</label><br>
-  <textarea placeholder="Enter your feedback here." required></textarea><br>
+  <textarea style="font-size: 20; height:200px; width:550px" placeholder="Enter your feedback here." required></textarea><hr>
 
-  <button type="submit" id="ContactSubmit">Submit</button>
+  <center><button style="background-color:hotpink; color:white;font-size: 20; height:30px; width:150px"type="submit" id="ContactSubmit" >Submit</button></center>
 </form>
 </div>
 

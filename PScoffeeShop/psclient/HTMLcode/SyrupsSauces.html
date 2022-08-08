@@ -3,38 +3,39 @@
 	<head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<img src="/psclient/images/mainImages/LOGOcropped2Circle.png" alt="Logo" width="110" height="120" align="left"/>
+		<script src='/psclient/js/SyrupsSauces.js' async></script>
 	<!-- <link rel="stylesheet" type="text/css" href="/psclient/css/Subscriptions.css"> -->
 	<script src='/psclient/js/LogOut.js' async></script>
 	</head>
 
 	<body style="background-color:white">
-	  <h2 style="color:hotpink">Presumptuous Sips</h2>
-		<h3 style="color:pink">P.S. Member Dashboard</h3>
+	  <h1 style="color:hotpink">Presumptuous Sips</h2>
+		<h2 style="color:pink">P.S. Member Dashboard</h3>
 
-  		<table id="psSchedule" border="2" width="100%" bgcolor="hotpink" height="8%">
-  		  <tr>
-  		    <th width="15%"><font color="white" size="3"><a href="/psclient/HTMLcode/PSDashboard.html"><I>DASHBOARD</I></a></font></th>
-					<th width="15%"><font color="white" size="3"><a href="#/psclient/HTMLcode/SyrupsSauces.html"><I>SHOP</I></a></font></th>
-					<th width="15%"><font color="white" size="3"><a href="/psclient/HTMLcode/Cart.html"><I>CART</I></a></font></th>
-  				<th width="15%"><font color="white" size="3"><a href="/psclient/HTMLcode/Member.html"><I>MEMBER</I></a></font></th>
+		<table id="psSchedule" border="2" width="100%" bgcolor="hotpink" height="8%">
+			<tr>
+				<th width="15%"><font color="white" size="5"><a href="/psclient/HTMLcode/PSDashboard.html"><I>DASHBOARD</I></a></font></th>
+				<th width="15%"><font color="white" size="5"><a href="/psclient/HTMLcode/SyrupsSauces.html"><I>SHOP</I></a></font></th>
+				<th width="15%"><font color="white" size="5"><a href="/psclient/HTMLcode/Member.html"><I>MEMBER</I></a></font></th>
+				<button onclick="LogOut()" style="color:hotpink"><I>LOG OUT</I></button>
+			</tr>
 
-					<button align="right" onclick="LogOut()" style="color:hotpink;"><I>LOG OUT</I></button>
-  			</tr>
-  </table>
+		</table>
 
-    <h2 style="color:hotpink">Shopping Cart: Syrups N Sauces</h2>
+    <h1 style="color:hotpink">Shopping Cart: Syrups N Sauces</h2>
 
-		<center><h3 style="color:pink">DaVinci Gourmet Syrups</h3></center>
-<table name=syrupsTable>
+		<center><h2 style="color:pink">DaVinci Gourmet Syrups</h3></center>
+<table id="syrupsTable">
 <tr align="center">
+
   <td>
 				<div align="center" class="productDes">
 					<img src="/psclient/images/DVG/DVGfrenchvanilla.jpeg" alt="French Vanilla" width="178" height="220"/>
 					<center><label style="font-size:15px" class="product"><B>DVG French Vanilla Syrup</B></label></center>
 					<h4 class="price">Price: $7.65</h4>
 					<h4 class="ounces">25.4 FL OZ</h4>
-					<h4 class="quantity">Quantity: <input type="text" size="5" id="quantityInput" onclick="UpdatePrice()"></h4>
-
+					<h4 class="quantity">Quantity: <input type="number" size="5" id="quantityInput1" min="0" max="10" oninput="quantityTest('#quantityInput1','#totalp1',7.65, 0)"></h4>
+					<p style="font-weight:bold" id="totalp1"></p>
 				</div>
   </td>
   <td>
@@ -43,8 +44,8 @@
 			  <center><label style="font-size:15px" class="product"><B>DVG Raspberry Syrup</B></label></center>
 				<h4 class="price">Price: $6.32</h4>
 				<h4 class="ounces">25.4 FL OZ</h4>
-				<h4 class="quantity">Quantity: <input type="text" size="5" id="quantityInput"></h4>
-
+				<h4 class="quantity">Quantity: <input type="number" size="5" id="quantityInput2" min="0" max="10" oninput="quantityTest('#quantityInput2','#totalp2',6.32,1)"></h4>
+				<p style="font-weight:bold" id="totalp2"></p>
 			</div>
   </td>
   <td>
@@ -53,8 +54,8 @@
 				<center><label style="font-size:15px" class="product"><B>DVG Caramel Syrup</B></label></center>
 				<h4 class="price">Price: $7.21</h4>
 				<h4 class="ounces">25.4 FL OZ</h4>
-				<h4 class="quantity">Quantity: <input type="text" size="5" id="quantityInput"></h4>
-
+				<h4 class="quantity">Quantity: <input type="number" size="5" id="quantityInput3" min="0" max="10" oninput="quantityTest('#quantityInput3','#totalp3',7.21,2)"></h4>
+				<p style="font-weight:bold" id="totalp3"></p>
 			</div>
   </td>
 
@@ -64,8 +65,8 @@
 				<center><label style="font-size:15px" class="product"><B>DVG Irish Cream Syrup</B></label></center>
 				<h4 class="price">Price: $6.78</h4>
 				<h4 class="ounces">25.4 FL OZ</h4>
-				<h4 class="quantity">Quantity: <input type="text" size="5" id="quantityInput"></h4>
-
+				<h4 class="quantity">Quantity: <input type="number" size="5" id="quantityInput4" min="0" max="10" oninput="quantityTest('#quantityInput4','#totalp4',6.78,3)"></h4>
+				<p style="font-weight:bold" id="totalp4"></p>
 			</div>
   </td>
   <td>
@@ -74,8 +75,8 @@
 				<center><label style="font-size:15px" class="product"><B>DVG Strawberry Syrup</B></label></center>
 				<h4 class="price">Price: $5.45</h4>
 				<h4 class="ounces">25.4 FL OZ</h4>
-				<h4 class="quantity">Quantity: <input type="text" size="5" id="quantityInput"></h4>
-
+				<h4 class="quantity">Quantity: <input type="number" size="5" id="quantityInput5" min="0" max="10" oninput="quantityTest('#quantityInput5','#totalp5',5.45,4)"></h4>
+				<p style="font-weight:bold" id="totalp5"></p>
 			</div>
   </td>
 </div>
@@ -84,15 +85,16 @@
 <hr class="dashed"></hr>
     <center><h3 style="color:pink">DaVinci Gourmet Sauces</h3></center>
 <table>
+	<!--Reference: https://www.w3schools.com/jsref/event_oninput.asp-->
 <tr align="center">
-  <td style="align-content: : center">
+  <td style="align-content: center">
 			<div class="productDes">
 				<img src="/psclient/images/DVG/DVGchocoSauce.jpeg" alt="Chocolate Sauce" width="200" height="190"/>
 				<center><label style="font-size:15px" class="product"><B>DVG Chocolate Sauce</B></label></center>
 				<h4 class="price">Price: $12.45</h4>
 				<h4 class="ounces">64 FL OZ</h4>
-				<h4 class="quantity">Quantity: <input type="text" size="5" id="quantityInput"></h4>
-
+				<h4 class="quantity">Quantity: <input type="number" size="5" id="quantityInput6" min="0" max="10" oninput="quantityTest('#quantityInput6','#totalp6',12.45,5)"></h4>
+				<p style="font-weight:bold" id="totalp6"></p>
 			</div>
   </td>
   <td>
@@ -101,8 +103,8 @@
 				<center><label style="font-size:15px" class="product"><B>DVG Pumpkin Sauce</B></label></center>
 				<h4 class="price">Price: $13.42</h4>
 				<h4 class="ounces">64 FL OZ</h4>
-				<h4 class="quantity">Quantity: <input type="text" size="5" id="quantityInput"></h4>
-
+				<h4 class="quantity">Quantity: <input type="number" size="5" id="quantityInput7" min="0" max="10" oninput="quantityTest('#quantityInput7','#totalp7',13.42,6)"></h4>
+				<p style="font-weight:bold" id="totalp7"></p>
 			</div>
   </td>
   <td>
@@ -111,16 +113,25 @@
 				<center><label style="font-size:15px" class="product"><B>DVG White Chocolate Sauce</B></label></center>
 				<h4 class="price">Price: $12.45</h4>
 				<h4 class="ounces">64 FL OZ</h4>
-				<h4 class="quantity">Quantity: <input type="text" size="5" id="quantityInput"></h4>
-
+				<h4 class="quantity">Quantity: <input type="number" size="5" id="quantityInput8" min="0" max="10" oninput="quantityTest('#quantityInput8','#totalp8',12.45,7)"></h4>
+				<p style="font-weight:bold" id="totalp8"></p>
 			</div><br>
   </td>
 </tr>
 </table>
 <hr class="dashed"></hr>
-<div align="center">
-	<button style="background-color:hotpink; color:white" id="AddToCart" onclick="SelectedItems()">Add to Cart</button><br>
 
-	<br><button style="background-color:green; color:white" id="checkout">Checkout</button>
+<div style="color: gray" id="TotalCalc">
+	<fieldset id="memberInfoFS" disabled=true>
+	<h3 id="subtotal">Subtotal	$<p style="color:hotpink" id="subt"></p></h3>
+	<h3 id="taxrate">Tax(7%)		$<p style="color:hotpink"id="taxr"></p></h3>
+	<h3 id="shipping">Shipping	$<p style="color:hotpink">15.00<p></h3>
+	<h3 id="grandTotal">Grand Total	$<p style="color:hotpink" id="grandt"></p></h3>
+</fieldset>
+</div>
+
+<hr class="dashed"></hr>
+<div align="center">
+	<br><button style="background-color:green; color:white" id="checkout" onclick="Checkout()">Checkout</button>
 </div>
 </html>

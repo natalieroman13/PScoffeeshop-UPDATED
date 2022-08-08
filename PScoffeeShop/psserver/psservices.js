@@ -118,20 +118,6 @@ console.log("we before query");
       });
     });
 
-    psapp.put('/getPrice', function(req,res){
-      console.log("we are getting the price");
-
-        var pricePerProduct=req.body.productPrice;
-
-      console.log(pricePerProduct);
-      connection.query("SELECT * FROM CartLineItem WHERE userID=?", [email, password, firstName, lastName, custPhone, city, state, zipCode, country, street, userData], function(err,results){
-        if(err){
-           return res.status(201).send(JSON.stringify({msg: "Error:" + err}))
-        } else {
-          return res.status(201).send(JSON.stringify({msg: "SUCCESS"}));
-        }
-      });
-    });
 
 };
 
