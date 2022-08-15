@@ -21,7 +21,6 @@ console.log("we creating account");
     res.status(200).sendFile(path.join(__dirname + "/../psclient/HTMLcode/PSDashboard.html"));
   });
 
-
   psapp.get("/Contact", function(req, res) {
     res.status(200).sendFile(path.join(__dirname + "/../psclient/HTMLcode/Contact.html"));
   });

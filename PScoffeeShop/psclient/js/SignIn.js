@@ -1,4 +1,10 @@
 //submit info
+console.log("we before create acc");
+$('#CreateNewAcc').click(function(){
+location.assign("http://localhost:6363"+"/CreateAccount");
+alert("Redirecting you to new page.");
+});
+
 $('#signin').click(function(){
   var email = $('#email').val();
 	var password = $('#password').val();
@@ -26,11 +32,6 @@ $('#signin').click(function(){
             }
   });
 
-});
-
-
-$('#CreateNewAcc').click(function(){
-location.assign("http://localhost:6363"+"/CreateAccount");
 });
 
 //Refernce: https://www.w3schools.com/howto/howto_js_toggle_password.asp
