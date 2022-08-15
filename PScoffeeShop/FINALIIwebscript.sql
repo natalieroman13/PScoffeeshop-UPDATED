@@ -1,5 +1,9 @@
+DROP DATABASE mydb;
 USE mydb;
 SELECT * FROM mydb.Customer;
+INSERT INTO Customer VALUES
+("saul", "garnica", "whynowork", "123-456-7890", "brownboi@gmail.com", DEFAULT, "brown", "NJ", 07712, "USA", "192 Apple Street");
+
 SELECT * FROM mydb.Contact;
 
 INSERT INTO Supplier VALUES 
